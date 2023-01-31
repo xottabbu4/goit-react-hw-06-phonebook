@@ -6,17 +6,11 @@ import css from './ContactForm.module.css';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(state => state.contacts.items);
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  // const state = {
-  //   name: setName,
-  //   number: setNumber,
-  // };
 
   const inputChange = event => {
-    // const { name, value } = event.target;
-    // state[name](value);
     if (event.target.name === 'name') {
       setName(event.target.value);
     }
